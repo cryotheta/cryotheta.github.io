@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasan - Home</title>
+    <title>Hasan - Machine Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <header>
-            <h1>Hasan Mustafa</h1>
-            <p class="tagline">Researcher | Developer | Writer</p>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="pages/cv.html">CV</a></li>
-                <li><a href="pages/research.html">Research</a></li>
-                <li><a href="pages/blog.html">Blog</a></li>
-                <li><a href="pages/more.html">More</a></li>
-            </ul>
-        </nav>
-        
-        <div class="content">
-            <h2>Welcome</h2>
-            <p>Welcome to my personal website. I'm a ML researcher interested in all things AI.</p>
-            <p>Feel free to explore and get in touch.</p>
-        </div>
-        
-        <footer>
-            <p>&copy; 2026 Hasan Mustafa All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/hasan-mustafa-35a545186/" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+
+        <!-- Two Column Hero Section -->
+        <header class="hero-section">
+            <div class="hero-left">
+                <img src="images/math_bird.png" alt="Mathematical Bird by Code" class="center-art">
+                <p class="citation">Art inspired by Hamid Naderi Yeganeh</p>
             </div>
+
+            <div class="hero-right">
+                <h1>Hasan Mustafa</h1>
+                <p class="tagline">Machine Learning Researcher | IIT Delhi</p>
+
+                <div class="intro-text">
+                    <p>Welcome to my digital workspace. I am a researcher stationed at the intersection of Artificial
+                        Intelligence and Quantum Computing at IIT Delhi.</p>
+                    <p>I explore how machines learn, how quantum systems compute, and how we can bridge the gap between
+                        biological intuition and silicon logic.</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Technologies Tab -->
+            <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+                <h2 style="text-align: center; border: none; margin-bottom: 20px; font-size: 28px; color: var(--pink);">
+                    System Stack</h2>
+                <div class="tech-container">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Quantum UI</span>
+                    <span class="tech-tag">Qiskit</span>
+                    <span class="tech-tag">LaTeX</span>
+                    <span class="tech-tag">Linux</span>
+                </div>
+            </div>
+
+            <!-- Fun Fact at Bottom -->
+            <div class="fun-fact-box">
+                <p><strong>Fun Fact:</strong> Did you know that a single neuron in a deep learning model is
+                    mathematically just a glorified "line decider" (y = mx + c)? It takes billions of them to recognize
+                    a cat!</p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Hasan Mustafa. Powered by Mathematics.</p>
         </footer>
     </div>
+
+    <!-- FIXED BOTTOM RIGHT NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
+            <li><a href="pages/research.html">Research</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/more.html">More</a></li>
+        </ul>
+    </nav>
 </body>
+
 </html>
