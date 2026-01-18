@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Blog</title>
+    <title>Hasan - Blog</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <header>
-            <h1>Your Name</h1>
-            <p class="tagline">Researcher | Developer | Writer</p>
+            <h1>Knowledge Graph</h1>
+            <p class="tagline">Thoughts in Markdown</p>
         </header>
-        
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="more.html">More</a></li>
-            </ul>
-        </nav>
-        
-        <div class="content">
-            <h2>Blog</h2>
-            
-            <div id="blog-list">
-                <!-- Blog posts will be loaded here -->
-            </div>
+
+        <div class="content" id="blog-container">
+            <!-- Blog posts will be injected here -->
+            <p>Loading neural pathways...</p>
         </div>
-        
+
         <footer>
-            <p>&copy; 2026 Your Name. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-            </div>
+            <p>&copy; 2026 Hasan Mustafa. Powered by Mathematics.</p>
         </footer>
     </div>
 
+    <!-- FIXED BOTTOM RIGHT NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="more.html">More</a></li>
+        </ul>
+    </nav>
+
     <script>
-        // Blog posts configuration
-        const blogPosts = [
+        // Configuration: Inline Markdown to bypass local CORS restrictions
+        const posts = [
             {
-                title: "My First Blog Post",
-                file: "blog/blog1.md",
-                date: "January 18, 2026"
-            },
-            {
-                title: "Another Interesting Post",
-                file: "blog/blog2.md",
-                date: "January 10, 2026"
+                id: 'what_is_ml',
+                title: 'What is Responsible AI?',
+                date: '2026-01-19',
+                content: `# What is Responsible AI?
+
+**Date:** 2026-01-19  
+**Tags:** AI, Intro, Education
+
+Responsible AI is a field that deals with the ethical and societal implications of AI. It is often mystified as "magic" or "robot intelligence", but at its core, it is simply **statistics on steroids**.
+
+Stay tuned for more deep dives!`
             }
         ];
 
-        // Load and display blog posts
-        async function loadBlogPosts() {
-            const blogList = document.getElementById('blog-list');
-            
-            for (const post of blogPosts) {
-                try {
-                    const response = await fetch(post.file);
-                    const markdown = await response.text();
-                    const html = marked.parse(markdown);
-                    
-                    const postDiv = document.createElement('div');
-                    postDiv.className = 'blog-post';
-                    postDiv.innerHTML = `
-                        <h3>${post.title}</h3>
-                        <p class="blog-date">${post.date}</p>
-                        ${html}
-                    `;
-                    blogList.appendChild(postDiv);
-                } catch (error) {
-                    console.error('Error loading blog post:', error);
-                }
-            }
+        function loadPosts() {
+            const container = document.getElementById('blog-container');
+            container.innerHTML = ''; // Clear loading text
+
+            posts.forEach(post => {
+                const htmlContent = marked.parse(post.content);
+
+                // Create Post Element
+                const postDiv = document.createElement('div');
+                postDiv.className = 'blog-post';
+
+                // Extract first paragraph for preview
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+                const previewText = tempDiv.querySelector('p') ? tempDiv.querySelector('p').innerText : 'Read more...';
+
+                postDiv.innerHTML = `
+                    <h3><a href="#" onclick="viewPost('${post.id}'); return false;">${post.title}</a></h3>
+                    <p class="blog-date">[ ${post.date} ]</p>
+                    <p>${previewText.substring(0, 150)}...</p>
+                `;
+
+                container.appendChild(postDiv);
+            });
         }
 
-        // Load posts when page loads
-        loadBlogPosts();
+        function viewPost(postId) {
+            const container = document.getElementById('blog-container');
+            const post = posts.find(p => p.id === postId);
+
+            if (!post) {
+                container.innerHTML = '<p>Error: Data corrupted.</p>';
+                return;
+            }
+
+            const htmlContent = marked.parse(post.content);
+
+            container.innerHTML = `
+                <div style="margin-bottom:20px;">
+                    <a href="#" onclick="location.reload(); return false;" style="color: var(--cyan);"><< Back to Index</a>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px;">
+                    ${htmlContent}
+                </div>
+            `;
+        }
+
+        // Initialize
+        loadPosts();
     </script>
 </body>
+
 </html>
