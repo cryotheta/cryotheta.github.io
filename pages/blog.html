@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p class="tagline">Researcher | Developer | Writer</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <h2>Blog</h2>
+            
+            <div id="blog-list">
+                <!-- Blog posts will be loaded here -->
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Blog posts configuration
+        const blogPosts = [
+            {
+                title: "My First Blog Post",
+                file: "blog/blog1.md",
+                date: "January 18, 2026"
+            },
+            {
+                title: "Another Interesting Post",
+                file: "blog/blog2.md",
+                date: "January 10, 2026"
+            }
+        ];
+
+        // Load and display blog posts
+        async function loadBlogPosts() {
+            const blogList = document.getElementById('blog-list');
+            
+            for (const post of blogPosts) {
+                try {
+                    const response = await fetch(post.file);
+                    const markdown = await response.text();
+                    const html = marked.parse(markdown);
+                    
+                    const postDiv = document.createElement('div');
+                    postDiv.className = 'blog-post';
+                    postDiv.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <p class="blog-date">${post.date}</p>
+                        ${html}
+                    `;
+                    blogList.appendChild(postDiv);
+                } catch (error) {
+                    console.error('Error loading blog post:', error);
+                }
+            }
+        }
+
+        // Load posts when page loads
+        loadBlogPosts();
+    </script>
+</body>
+</html>
