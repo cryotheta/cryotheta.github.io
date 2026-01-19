@@ -31,9 +31,9 @@ Total Respondents: 36
 
 #### Findings
 1. Data Issues:
-The paper makes several observations which would be very familiar to most Indians living or brought up in urban settings and 
-2. 
-3. 
-
-
-
+The paper makes several observations which would be very familiar to most Indians would have come across. The most notable data collection challenges arise from people navingating their social situations to make the best of what they have and/or to preserve privacy or protect identity. These behavior patterns include shared usage of mobile phones in households which breaks the assumption of one data point(in this case phone number as proxy for identity) corresponds to only one person. Similar patterns are observed in other proxies such as location which for example changes with time in migrant worker communities. The authors further describe the problems due to disproportiante participation of people online or in surverys owing to scoietal divides like patriarchy and class that have crept as is in the digital space; thus they note that rural women are most under-represented groups online alongside tribal communties. Authors acknowlege that vast amount of data is collected by government agencies however there is little political will to digitize the data and make them available publicly.
+This digital divide in online footprint means that some concerns and problems are more visible than others depending on the group, brigading and online trolling is further a factor which the authors have not considered but which affects the digital presence of several marginalized groups.
+2. Model
+Fair ML standards are rarely enforced in india for example credit applications can use all personal data on phone like call logs etc to model a person's likelihood of repayment. Many technologies that are imported from the west are used out of the box or with unscrupulous contenxtualization. It is also worth noting that most AI technologies are quickly rolled out in india without much consideration for fairness and has led the author to dub India as "Petri Dishes" of AI. This stems from the idea that most AI is deployed with the purpose of quickly collecting more data without regards to personal boundaries and to utilize the linguistic diversity to improve the models' robustness.
+Reflection:
+In recent discourse the idea of India 1, India 2 and India 3 is quite similar to the analyisis in this section, most online services are targetted to india 1(>10LPA which can be considered as upper middle class).  
