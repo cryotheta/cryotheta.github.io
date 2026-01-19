@@ -47,5 +47,10 @@ Emergence of dark patterns in quick commerce is another development that the pap
 While the paper acknowledges that representation of social groups in journalism reflects the broader social inequalities, they do not evaluate or consider the technical literarcy of mass media journalists with regards to AI given the fast pace developments in AI.
 The authors do not engage with effects of online behavior such as astroturfing and trolling that significantly shapes public discourse and drives response from companies and state alike.
 
+Another contemporary challenge is assessing the fairness of new systems like content recommendation systems. It has been anecdotally observed that content recommendation algorithms can reinforce biases or even drive vulnerable users like those in depression to perform self harm. Such systems are hard to fit in the current ML Fairness framework of selection rates and demographic parity. A related challenge is how content moderation systems work and do they have biases wrt what kind of content that is reported is likely to be banned. This is especially relevant in Indian context where online discourse can get uncivil. This is especially important given increasingly partisan nature of social media ownership(e.g X/Twitter)
+
+The paper does not engage with intersectional vulnerabilities as much, while it does acknowledge the intersection of caste and gender it fails to look at other intersectionalities like language and class and occupation(blue vs white collar), religion and caste.
+
+The paper scratches the surface of network effects in the context of credit worthiness, however it fails to note the effects of social-network(not to be confused with social media) leading to digital redlining. Examples include companies limiting CoD features based on risk for the entire pin codes or algorithms that look for Lookalike audiences.
 
 *ASCII Art created by ChatGPT
