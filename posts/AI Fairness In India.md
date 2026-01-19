@@ -15,6 +15,7 @@ The authors describe their methodology as an "exploratory study" where they inte
 
 Respondent Distribution by Field
 
+```text
 Computer Science        | ########### (11)
 Activism                | #########   (9)
 Law & Public Policy     | ######      (6)
@@ -26,4 +27,13 @@ Journalism              | #           (1)
 
 Legend: # = 1 respondent
 Total Respondents: 36
+```
+
+#### Findings
+1. Data Issues:
+The paper makes several observations which would be very familiar to most Indians living or brought up in urban settings and 
+2. 
+3. 
+
+
 
