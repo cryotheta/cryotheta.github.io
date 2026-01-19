@@ -11,4 +11,7 @@ Difference in error rates(FPRs) between groups results in person of the more rec
 ###### Result 2
 Authors look at subgroups based on priors, looking at only people who had misdemeanour as the prior, same patterns of FPR can be seen, which suggests that even for similar priors, members of different social groups are treated differently across social groups.
 ###### Result 3
-Authors simulate average prison time and 
+Authors simulate average prison time for varying degrees of offences (Misdemeanour through felony) and found that black inmates were likely to serve longer durations across felony classes based on interpolated sentencing scheme(i.e. sentence proportional to risk score) and min-max sentencing scheme.
+
+##### Thoughts
+So, what are the tradeoffs we make if we enforce error rate parity instead of calibration? We have unequal PPV across groups that would imply that group with lower prevalance has lower PPV and group with higher prevalance has higher ppv. If we apply normative interpretation, we are arguing that a variable with predictive power(group attribute) must be disregarded because it is either irrelevant or emboldens known systemic biases.
