@@ -46,4 +46,6 @@ Authors barely touch upon questions of data ownership, while they agree that dat
 Emergence of dark patterns in quick commerce is another development that the paper could not have forseen but many ideas can be applied directly to the analysis of the system. Algorithms are increasingly determining what and how gig workers do, in this light it is important to make sure that these algorithms are fair and not explotitative/manipulative.
 While the paper acknowledges that representation of social groups in journalism reflects the broader social inequalities, they do not evaluate or consider the technical literarcy of mass media journalists with regards to AI given the fast pace developments in AI.
 The authors do not engage with effects of online behavior such as astroturfing and trolling that significantly shapes public discourse and drives response from companies and state alike.
+
+
 *ASCII Art created by ChatGPT
