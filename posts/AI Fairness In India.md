@@ -13,7 +13,7 @@ Race and Gender have dominated the fairness discourse in the USA, with secondary
 Early datasets like Imagenet did not have representation from non western contexts, similarly many NLP systems have struggled with non-western names for instance. This points to an issue realted to lack of good quality data. These issues are compounded by the fact that many of these systems are built without clear fairness goals and can often have complicated owenership and liability issues.
 The authors describe their methodology as an "exploratory study" where they interview experts from various facets of live to understand the landscape.
 
-Respondent Distribution by Field
+Respondent Distribution by Field*
 
 ```text
 Computer Science        | ########### (11)
@@ -46,3 +46,4 @@ Authors barely touch upon questions of data ownership, while they agree that dat
 Emergence of dark patterns in quick commerce is another development that the paper could not have forseen but many ideas can be applied directly to the analysis of the system. Algorithms are increasingly determining what and how gig workers do, in this light it is important to make sure that these algorithms are fair and not explotitative/manipulative.
 While the paper acknowledges that representation of social groups in journalism reflects the broader social inequalities, they do not evaluate or consider the technical literarcy of mass media journalists with regards to AI given the fast pace developments in AI.
 The authors do not engage with effects of online behavior such as astroturfing and trolling that significantly shapes public discourse and drives response from companies and state alike.
+*ASCII Art created by ChatGPT
